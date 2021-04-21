@@ -6,7 +6,7 @@ import java.util.Set;
 public class TutorGroup {
 	private Set<Student> students;
 	private String id;
-	private WeeklyTimeSlot TimeSlot;
+	private WeeklyTimeSlot timeSlot;
 	private Person tutor;
 	private Set<TutorGroupMeeting> meetings;
 
@@ -19,7 +19,7 @@ public class TutorGroup {
     }
 
     public WeeklyTimeSlot getTimeSlot() {
-        return TimeSlot;
+        return timeSlot;
     }
 
     public Person getTutor() {
@@ -28,13 +28,13 @@ public class TutorGroup {
 
     public TutorGroup(String id, WeeklyTimeSlot weeklyTimeSlot, Person tutor) {
         this.id = id;
-        this.TimeSlot = weeklyTimeSlot;
+        this.timeSlot = weeklyTimeSlot;
         this.tutor = tutor;
         this.students = new HashSet<>();
         this.meetings = new HashSet<>();
     }
 
-    public void addMeeting(TutorGroupMeeting tutorGroupMeeting){
+    protected void addMeeting(TutorGroupMeeting tutorGroupMeeting){
         this.meetings.add(tutorGroupMeeting);
     }
 
