@@ -1,11 +1,12 @@
 package de.tum.in.ase.eist;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class TutorGroup {
 	private Set<Student> students;
 	private String id;
-	private WeeklyTimeSlot weeklyTimeSlot;
+	private WeeklyTimeSlot TimeSlot;
 	private Person tutor;
 	private Set<TutorGroupMeeting> meetings;
 
@@ -17,8 +18,8 @@ public class TutorGroup {
         return id;
     }
 
-    public WeeklyTimeSlot getWeeklyTimeSlot() {
-        return weeklyTimeSlot;
+    public WeeklyTimeSlot getTimeSlot() {
+        return TimeSlot;
     }
 
     public Person getTutor() {
@@ -27,8 +28,10 @@ public class TutorGroup {
 
     public TutorGroup(String id, WeeklyTimeSlot weeklyTimeSlot, Person tutor) {
         this.id = id;
-        this.weeklyTimeSlot = weeklyTimeSlot;
+        this.TimeSlot = weeklyTimeSlot;
         this.tutor = tutor;
+        this.students = new HashSet<>();
+        this.meetings = new HashSet<>();
     }
 
     public void addMeeting(TutorGroupMeeting tutorGroupMeeting){
