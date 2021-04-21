@@ -26,8 +26,13 @@ public class Student extends Person {
         return skills;
     }
 
-    public Student(String name, int age, String tumId, StudyLevel studyLevel, int semester) {
+    public StudyLevel getStudyLevel() {
+        return studyLevel;
+    }
+
+    public Student(String name, int age, String tumId, String matriculationNumber, StudyLevel studyLevel, int semester) {
         super(name, age, tumId);
+        this.matriculationNumber = matriculationNumber;
         this.studyLevel = studyLevel;
         this.semester = semester;
         this.knowledge = new HashSet<>();

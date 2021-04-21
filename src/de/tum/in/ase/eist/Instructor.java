@@ -7,7 +7,7 @@ public class Instructor extends Person{
     }
 
     public void teach(String lectureContent){
-        say("Please learn " + lectureContent);
+        say("Please learn " + '"' + lectureContent + '"');
     }
 
 }

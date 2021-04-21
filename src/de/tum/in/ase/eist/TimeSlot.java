@@ -3,7 +3,7 @@ package de.tum.in.ase.eist;
 import java.time.Duration;
 import java.time.LocalTime;
 
-public class TimeSlot {
+public abstract class TimeSlot {
 	private LocalTime startTime;
 	private LocalTime endTime;
 
